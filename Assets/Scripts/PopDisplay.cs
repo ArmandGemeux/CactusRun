@@ -30,6 +30,23 @@ public class PopDisplay : MonoBehaviour
 
     public void QuitSysteme()
     {
+        if(pop.myType == popType.ErreurSysteme)
+        {
+            Destroy(gameObject);
+        }
+        if(pop.myType == popType.FatalErreurSysteme)
+        {
+            GameManager_Error.Instance.fatalInvoke = true;
+            GameManager_Error.Instance.InstancePopup();
+        }
+        if(pop.myType == popType.Pubs)
+        {
+            Debug.Log("ne se ferme pas comme ça");
+        }
+    }
 
+    public void ForceQuit()
+    {
+        Destroy(gameObject);
     }
 }

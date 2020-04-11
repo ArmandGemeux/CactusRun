@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager_Error : MonoBehaviour
 {
+    public bool fatalInvoke;
     public int timeBeforePopUpgrade = 10;
 
     public GameObject popInstance;
@@ -41,28 +42,46 @@ public class GameManager_Error : MonoBehaviour
     public Pops SendPop()
     {
         Debug.Log("send");
-        if(Time.deltaTime < timeBeforePopUpgrade)
+        
+        if (Time.deltaTime > timeBeforePopUpgrade)
         {
-            Debug.Log("erreur1");
-            return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
+            if(fatalInvoke == false)
+            {
+                Debug.Log("erreur2");
+                int rand = Random.Range(0, 3);
+                if (rand == 0)
+                {
+                    return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
+                }
+                if (rand == 1)
+                {
+                    return pub[Random.Range(0, pub.Length)];
+                }
+                if (rand == 2)
+                {
+                    return fatalErreurSysteme[Random.Range(0, fatalErreurSysteme.Length)];
+                }
+            }
+            else
+            {
+                int rand = Random.Range(0, 2);
+                if (rand == 0)
+                {
+                    return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
+                }
+                if (rand == 1)
+                {
+                    return pub[Random.Range(0, pub.Length)];
+                }
+                fatalInvoke = false;
+            }
             
         }
         else
         {
-            Debug.Log("erreur2");
-            int rand = Random.Range(0, 3);
-            if (rand == 0)
-            {
-                return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
-            }
-            if (rand == 1)
-            {
-                return pub[Random.Range(0, pub.Length)];
-            }
-            if (rand == 2)
-            {
-                return fatalErreurSysteme[Random.Range(0, fatalErreurSysteme.Length)];
-            }
+            Debug.Log("erreur1");
+            return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
+
         }
         return null;
     }
@@ -95,7 +114,7 @@ public class GameManager_Error : MonoBehaviour
         return range;
     }
 
-    private void InstancePopup()
+    public void InstancePopup()
     {
         Instantiate(popInstance, popupParent); 
     }
