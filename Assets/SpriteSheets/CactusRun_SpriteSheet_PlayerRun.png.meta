@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: 041642b39349bf54fabd1a76be099f4f
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3807746192140433166
+    second: CactusRun_SpriteSheet_PlayerRun_0
+  - first:
+      213: -4541910162563307591
+    second: CactusRun_SpriteSheet_PlayerRun_1
+  - first:
+      213: -7018495488179332447
+    second: CactusRun_SpriteSheet_PlayerRun_2
+  - first:
+      213: 7693745117927800439
+    second: CactusRun_SpriteSheet_PlayerRun_3
+  - first:
+      213: 7030161907719566239
+    second: CactusRun_SpriteSheet_PlayerRun_4
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,7 +55,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -96,7 +111,112 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CactusRun_SpriteSheet_PlayerRun_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 70
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe90702492323d249a3e4f1081482ef7
+      internalID: -3807746192140433166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CactusRun_SpriteSheet_PlayerRun_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 70
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdf824978ef4e324b8d93636ebbd0301
+      internalID: -4541910162563307591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CactusRun_SpriteSheet_PlayerRun_2
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 70
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b44188cff3cd16e4c9b71dfc4ec7bca2
+      internalID: -7018495488179332447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CactusRun_SpriteSheet_PlayerRun_3
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 3
+        width: 31
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a5e40db1f5cbe54fb489062cf1b600c
+      internalID: 7693745117927800439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CactusRun_SpriteSheet_PlayerRun_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 3
+        width: 31
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 922562011471d1f409b7af2b699160f8
+      internalID: 7030161907719566239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
