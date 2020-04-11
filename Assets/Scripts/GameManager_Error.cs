@@ -44,13 +44,10 @@ public class GameManager_Error : MonoBehaviour
 
     public Pops SendPop()
     {
-        Debug.Log("send");
-        
         if (Time.time > timeBeforePopUpgrade)
         {
             if(fatalInvoke == false)
             {
-                Debug.Log("erreur2");
                 int rand = Random.Range(0, 3);
                 if (rand == 0)
                 {
@@ -82,30 +79,9 @@ public class GameManager_Error : MonoBehaviour
         }
         else
         {
-            Debug.Log("erreur1");
             return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
-
         }
         return null;
-    }
-
-    public void QuitSysteme()
-    {
-        /*if (popInstance.GetComponent<Component>().PopDisplay().myType == popType.ErreurSysteme)
-        {
-            Destroy(popInstance);
-        }
-
-        else if (popInstance.GetComponent<Component>().PopDisplay().myType == popType.FatalErreurSysteme)
-        {
-            Destroy(popInstance);
-            Instantiate(popInstance, popupParent);
-        }
-
-        else
-        {
-            return;
-        }*/
     }
 
     public Vector2 RandomRange()

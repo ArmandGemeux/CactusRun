@@ -9,7 +9,7 @@ public class Pops : ScriptableObject
     public popType myType;
     public new string name;
     public string description;
-    public string typeErreur;
+    public string annotation;
 
     public Sprite image;
 

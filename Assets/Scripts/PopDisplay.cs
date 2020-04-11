@@ -21,7 +21,7 @@ public class PopDisplay : MonoBehaviour
         Debug.Log(pop.name);
         nameText.text = pop.name;
         descriptionText.text = pop.description;
-        annotation.text = pop.typeErreur;
+        annotation.text = pop.annotation;
 
         imagePop.sprite = pop.image;
 
