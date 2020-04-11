@@ -38,6 +38,7 @@ public class PopDisplay : MonoBehaviour
         {
             GameManager_Error.Instance.fatalInvoke = true;
             GameManager_Error.Instance.InstancePopup();
+            Destroy(gameObject);
         }
         if(pop.myType == popType.Pubs)
         {
