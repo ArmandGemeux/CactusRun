@@ -18,7 +18,6 @@ public class PopDisplay : MonoBehaviour
     void Start()
     {
         pop = GameManager_Error.Instance.SendPop();
-        Debug.Log(pop.name);
         nameText.text = pop.name;
         descriptionText.text = pop.description;
         annotation.text = pop.annotation;

@@ -242,6 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4766765811354649002}
   - component: {fileID: 542322414820124873}
+  - component: {fileID: -2373127966141668930}
   m_Layer: 5
   m_Name: PopPrefab
   m_TagString: Untagged
@@ -285,6 +286,19 @@ MonoBehaviour:
   descriptionText: {fileID: 8288136771270863642}
   annotation: {fileID: 3430590075409568946}
   imagePop: {fileID: 2888228356064398627}
+--- !u!114 &-2373127966141668930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5010406420719426694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad9d4cb705e0a7d419bd60e74dcd4832, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
 --- !u!1 &7732748893687474104
 GameObject:
   m_ObjectHideFlags: 0
