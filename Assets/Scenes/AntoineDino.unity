@@ -702,6 +702,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PopPrefab
       objectReference: {fileID: 0}
+    - target: {fileID: 5010406420719426694, guid: 013c3143adf7ac74a9de1116bb7466dc,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6879126452981474664, guid: 013c3143adf7ac74a9de1116bb7466dc,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -1259,9 +1264,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeBeforePopUpgrade: 10
-  popInstance: {fileID: 0}
-  erreurSysteme: []
-  pub: []
+  popInstance: {fileID: 5010406420719426694, guid: 013c3143adf7ac74a9de1116bb7466dc,
+    type: 3}
+  erreurSysteme:
+  - {fileID: 11400000, guid: 4f15b72ce9e3f7947add46eaf11c855a, type: 2}
+  pub:
+  - {fileID: 11400000, guid: a7f4c984eeb5ed84a8e5352b5d395bbc, type: 2}
   fatalErreurSysteme: []
 --- !u!1 &1432995969
 GameObject:
