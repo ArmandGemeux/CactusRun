@@ -63,7 +63,7 @@ public class Cactus_GameManager : MonoBehaviour
 
     private void SpawnObstacle()
     {
-        Instantiate(obstacle, spawnPoint.position, Quaternion.identity);
+        Instantiate(obstacle, spawnPoint, false);
     }
 
     private void ShowScore()
