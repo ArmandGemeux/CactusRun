@@ -455,6 +455,7 @@ MonoBehaviour:
   timeBeforePopUpgrade: 10
   popInstance: {fileID: 5010406420719426694, guid: 013c3143adf7ac74a9de1116bb7466dc,
     type: 3}
+  popupParent: {fileID: 1726895295}
   erreurSysteme:
   - {fileID: 11400000, guid: 4f15b72ce9e3f7947add46eaf11c855a, type: 2}
   pub:
