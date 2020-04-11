@@ -17,12 +17,19 @@ public class PopDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameManager_Error.Instance.SendPop(pop);
-
+        pop = GameManager_Error.Instance.SendPop();
+        Debug.Log(pop.name);
         nameText.text = pop.name;
         descriptionText.text = pop.description;
         annotation.text = pop.typeErreur;
 
         imagePop.sprite = pop.image;
+
+        transform.position = GameManager_Error.Instance.RandomRange();
+    }
+
+    public void QuitSysteme()
+    {
+
     }
 }

@@ -7,12 +7,11 @@ public class GameManager_Error : MonoBehaviour
     public int timeBeforePopUpgrade = 10;
 
     public GameObject popInstance;
+    public Transform popupParent;
 
     public Pops[] erreurSysteme;
     public Pops[] pub;
     public Pops[] fatalErreurSysteme;
-
-    private Vector2 range;
 
     public static GameManager_Error Instance;
     private void Awake()
@@ -39,43 +38,46 @@ public class GameManager_Error : MonoBehaviour
         
     }
 
-    public void SendPop(Pops pop)
+    public Pops SendPop()
     {
-        if(Time.time < timeBeforePopUpgrade)
+        Debug.Log("send");
+        if(Time.deltaTime < timeBeforePopUpgrade)
         {
-            pop = erreurSysteme[Random.Range(0, erreurSysteme.Length)];
-            return;
+            Debug.Log("erreur1");
+            return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
+            
         }
-        if(Time.time > timeBeforePopUpgrade)
+        else
         {
+            Debug.Log("erreur2");
             int rand = Random.Range(0, 3);
-            if(rand == 0)
+            if (rand == 0)
             {
-                pop = erreurSysteme[Random.Range(0, erreurSysteme.Length)];
+                return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
             }
             if (rand == 1)
             {
-                pop = pub[Random.Range(0, pub.Length)];
+                return pub[Random.Range(0, pub.Length)];
             }
             if (rand == 2)
             {
-                pop = fatalErreurSysteme[Random.Range(0, fatalErreurSysteme.Length)];
+                return fatalErreurSysteme[Random.Range(0, fatalErreurSysteme.Length)];
             }
         }
+        return null;
     }
 
     public void QuitSysteme()
     {
-        /*if (Instance.GetComponent<Component>().PopDisplay().myType == popType.ErreurSysteme)
+        /*if (popInstance.GetComponent<Component>().PopDisplay().myType == popType.ErreurSysteme)
         {
             Destroy(popInstance);
         }
 
-        else if (Instance.GetComponent<Component>().PopDisplay().myType == popType.FatalErreurSysteme)
+        else if (popInstance.GetComponent<Component>().PopDisplay().myType == popType.FatalErreurSysteme)
         {
             Destroy(popInstance);
-            Instantiate(popInstance,range,Quaternion.identity);
-            
+            Instantiate(popInstance, popupParent);
         }
 
         else
@@ -84,9 +86,17 @@ public class GameManager_Error : MonoBehaviour
         }*/
     }
 
-    private void RandomRange()
+    public Vector2 RandomRange()
     {
+        Vector2 range;
         range.x = Random.Range(0, Screen.width);
         range.y = Random.Range(0, Screen.height);
+        
+        return range;
+    }
+
+    private void InstancePopup()
+    {
+        Instantiate(popInstance, popupParent); 
     }
 }
