@@ -46,7 +46,7 @@ public class GameManager_Error : MonoBehaviour
     {
         Debug.Log("send");
         
-        if (Time.deltaTime > timeBeforePopUpgrade)
+        if (Time.time > timeBeforePopUpgrade)
         {
             if(fatalInvoke == false)
             {
