@@ -36,7 +36,10 @@ public class GameManager_Error : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            InstancePopup();
+        }
     }
 
     public Pops SendPop()
