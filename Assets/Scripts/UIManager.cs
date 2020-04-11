@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
 
     public Animator antivirusAnimator;
     public TMP_Text tittleAntivirusText;
+    public TMP_Text descriptionAntivirusText;
 
     public float timeShowingNotif;
 
@@ -37,12 +38,15 @@ public class UIManager : MonoBehaviour
 
     private void StartShowingAntivirus(string newTittleText, string newDescriptionText)
     {
-        antivirusAnimator.gameObject.SetActive(true);
+        tittleAntivirusText.text = newTittleText;
+        descriptionAntivirusText.text = newDescriptionText;
+        antivirusAnimator.SetBool("isShowing", true);
+
         Invoke("StopShowingAntivirus", timeShowingNotif);
     }
 
     private void StopShowingAntivirus()
     {
-        antivirusAnimator.SetTrigger("StopShowing");
+        antivirusAnimator.SetBool("isShowing", false);
     }
 }
