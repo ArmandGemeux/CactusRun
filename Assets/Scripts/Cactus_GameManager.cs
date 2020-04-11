@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,7 +16,7 @@ public class Cactus_GameManager : MonoBehaviour
 
     private float score = 0;
 
-    public Text scoreText;
+    public TextMeshProUGUI scoreText;
 
     private bool isAlive = true;
 

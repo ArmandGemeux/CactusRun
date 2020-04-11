@@ -24,6 +24,6 @@ public class WindowScript : MonoBehaviour
     private void OnMouseDrag()
     {
         Vector2 cursorPose = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector2(cursorPose.x, cursorPose.y);
+        transform.position = new Vector2(cursorPose.x, cursorPose.y + -2.73f);
     }
 }
