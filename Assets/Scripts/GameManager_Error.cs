@@ -170,6 +170,7 @@ public class GameManager_Error : MonoBehaviour
 
     public void EnableBlueScreen()
     {
+        AudioManager.Instance.StopSound("Music");
         Invoke("ShowBlueScreen", timeToCastBlueScreen);
     }
 
