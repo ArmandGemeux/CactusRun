@@ -43,18 +43,16 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log(lifeValue);
 
-        if (lifeValue > lifeShowing + lifeShowingSpeed)
+        if (lifeValue > lifeShowing + 1)
         {
             lifeShowing += Time.deltaTime * lifeShowingSpeed;
-            Debug.Log("salut");
         }
-        else if (lifeValue < lifeShowing - lifeShowingSpeed)
+        else if (lifeValue < lifeShowing - 1)
         {
             lifeShowing -= Time.deltaTime * lifeShowingSpeed;
-            Debug.Log("aurevoir");
-            Debug.Log(lifeShowing);
         }
-        else if (lifeShowing - lifeShowingSpeed > lifeValue && lifeValue > lifeShowing + lifeShowingSpeed)
+
+        if (lifeShowing - 1 >= lifeValue && lifeValue >= lifeShowing + 1)
         {
             lifeShowing = lifeValue;
         }

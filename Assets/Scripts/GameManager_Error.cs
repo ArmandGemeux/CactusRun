@@ -7,6 +7,8 @@ public class GameManager_Error : MonoBehaviour
 {
     public GameObject blueScreen;
 
+    private float timeFromStart = 0;
+
     public bool fatalInvoke;
     public int timeBeforePopUpgrade = 15;
     public float timeBeforePopupSpawn = 2.5f;
@@ -59,6 +61,8 @@ public class GameManager_Error : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeFromStart += Time.deltaTime;
+
         if (canPopupSpawn == false)
         { return; }
 
@@ -67,7 +71,7 @@ public class GameManager_Error : MonoBehaviour
             InstancePopup();
         }
 
-        if(Time.time > timeBeforePopupSpawn && canPopupSpawn)
+        if(timeFromStart > timeBeforePopupSpawn && canPopupSpawn)
         {
             timeBeforePopupSpawn /= reduceSpawnIntervaleDivide;
             timeBeforePopupSpawn += Time.time;
@@ -78,7 +82,7 @@ public class GameManager_Error : MonoBehaviour
 
     public Pops SendPopup()
     {
-        if (Time.time > timeBeforePopUpgrade*2)
+        if (timeFromStart > timeBeforePopUpgrade*2)
         {
             if(fatalInvoke == false)
             {
@@ -134,7 +138,7 @@ public class GameManager_Error : MonoBehaviour
 
     public void InstancePopup()
     {
-        if(Time.time > timeBeforePopUpgrade)
+        if(timeFromStart > timeBeforePopUpgrade)
         {
             int rand = Random.Range(0, 3);
             if(rand > 0)
@@ -187,5 +191,10 @@ public class GameManager_Error : MonoBehaviour
         }
 
         UIManager.Instance.SetLifeValue(life);
+
+        if (life >= 100)
+        {
+            ToggleBlueScreen();
+        }
     }
 }
