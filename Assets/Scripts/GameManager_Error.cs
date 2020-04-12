@@ -11,9 +11,11 @@ public class GameManager_Error : MonoBehaviour
 
     public bool fatalInvoke;
     public int timeBeforePopUpgrade = 15;
-    public float timeBeforePopupSpawn = 2.5f;
+    public float timeBeforePopupSpawn;
     public float reduceSpawnIntervaleDivide = 1;
     public bool canPopupSpawn;
+
+    private float saveTime;
 
     public GameObject popupPubInstance;
     public GameObject popInstance;
@@ -55,7 +57,7 @@ public class GameManager_Error : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        saveTime = reduceSpawnIntervaleDivide;
     }
 
     // Update is called once per frame
@@ -71,11 +73,11 @@ public class GameManager_Error : MonoBehaviour
             InstancePopup();
         }
 
-        if(timeFromStart > timeBeforePopupSpawn && canPopupSpawn)
+        if(timeFromStart > saveTime && canPopupSpawn)
         {
-            timeBeforePopupSpawn /= reduceSpawnIntervaleDivide;
-            timeBeforePopupSpawn += timeFromStart;
-            reduceSpawnIntervaleDivide++;
+            saveTime /= timeBeforePopupSpawn;
+            saveTime += timeFromStart;
+            timeBeforePopupSpawn += reduceSpawnIntervaleDivide;
             InstancePopup();
         }
     }
@@ -119,7 +121,7 @@ public class GameManager_Error : MonoBehaviour
 
             return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
         }
-        return null;
+        return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
     }
 
     public Pops SendPopupPub()
