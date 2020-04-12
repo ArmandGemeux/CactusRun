@@ -7,9 +7,17 @@ public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
 
+    public GameObject antiVirusObject;
     public Animator antivirusAnimator;
     public TMP_Text tittleAntivirusText;
     public TMP_Text descriptionAntivirusText;
+
+    public TMP_Text life;
+
+    private float lifeValue;
+    private float lifeShowing;
+
+    public float lifeShowingSpeed;
 
     public float timeShowingNotif;
 
@@ -27,17 +35,37 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.Log(lifeValue);
+
+        if (lifeValue > lifeShowing + lifeShowingSpeed)
+        {
+            lifeShowing += Time.deltaTime * lifeShowingSpeed;
+            Debug.Log("salut");
+        }
+        else if (lifeValue < lifeShowing - lifeShowingSpeed)
+        {
+            lifeShowing -= Time.deltaTime * lifeShowingSpeed;
+            Debug.Log("aurevoir");
+            Debug.Log(lifeShowing);
+        }
+        else if (lifeShowing - lifeShowingSpeed > lifeValue && lifeValue > lifeShowing + lifeShowingSpeed)
+        {
+            lifeShowing = lifeValue;
+        }
+
+        showLife(lifeShowing);
     }
 
-    private void StartShowingAntivirus(string newTittleText, string newDescriptionText)
+    public void StartShowingAntivirus(string newTittleText, string newDescriptionText)
     {
+        antiVirusObject.SetActive(true);
+
         tittleAntivirusText.text = newTittleText;
         descriptionAntivirusText.text = newDescriptionText;
         antivirusAnimator.SetBool("isShowing", true);
@@ -48,5 +76,15 @@ public class UIManager : MonoBehaviour
     private void StopShowingAntivirus()
     {
         antivirusAnimator.SetBool("isShowing", false);
+    }
+
+    public void SetLifeValue(float newLife)
+    {
+        lifeValue = newLife;
+    }
+
+    public void showLife(float newLife)
+    {
+        life.text = newLife.ToString("0") + (" %");
     }
 }
