@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580d0843474d8f5498277e5bdc2311b9, type: 3}
   m_Name: FatalError6
   m_EditorClassIdentifier: 
-  myType: 0
+  myType: 2
   name: 
   description: "Erreur syst\xE8me, veuillez redemarrer"
   annotation: 

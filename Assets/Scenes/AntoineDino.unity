@@ -793,12 +793,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c6ac420fa60a3d74daf5f1b8ddaeae17, type: 2}
   - {fileID: 11400000, guid: a0f5b78b1ca8c0b438d1145b8f385af9, type: 2}
   - {fileID: 11400000, guid: c0d96ca97337459428a9306c9ec1c434, type: 2}
+  - {fileID: 11400000, guid: c88438ad86a6d0640971faf0efdd7ad3, type: 2}
+  - {fileID: 11400000, guid: df9ee431216aa584fb5470b8f7cf130c, type: 2}
+  - {fileID: 11400000, guid: 959dc7a02bf65eb4f978d381601579b1, type: 2}
+  - {fileID: 11400000, guid: e86f8fc1c99458b42a849f6ca6719151, type: 2}
+  - {fileID: 11400000, guid: 4ce9f04a0e935e74f96cefda1db2899d, type: 2}
   pub:
   - {fileID: 11400000, guid: a7f4c984eeb5ed84a8e5352b5d395bbc, type: 2}
   - {fileID: 11400000, guid: 927e05c62993de54da8ca0badfcc8f6c, type: 2}
   fatalErreurSysteme:
-  - {fileID: 11400000, guid: 27f61525fdfd2854fb6490b237e2518b, type: 2}
   - {fileID: 11400000, guid: 3940cd930b44fe54db017ce07f356177, type: 2}
+  - {fileID: 11400000, guid: 27f61525fdfd2854fb6490b237e2518b, type: 2}
+  - {fileID: 11400000, guid: 673bb7332228ce3448f272500fc82eff, type: 2}
+  - {fileID: 11400000, guid: 2fa0b4bfafad7d849b62d5d5f378b46b, type: 2}
+  - {fileID: 11400000, guid: 78474bb2f184da64586b46518225c45b, type: 2}
+  - {fileID: 11400000, guid: 27452b7d24a119f4c8a5428d8022a1c8, type: 2}
+  - {fileID: 11400000, guid: 7712b21198e298446b1806bc57541c05, type: 2}
+  - {fileID: 11400000, guid: 85ae0e2407f943d4685b07cc334c70dc, type: 2}
+  - {fileID: 11400000, guid: 1a0730399d3b00d478c9621b37b0dc9b, type: 2}
+  - {fileID: 11400000, guid: 9ccbe28a70b6afe40aaffe264eedc870, type: 2}
   erreurSystemImage: {fileID: 21300000, guid: fb79b20b502bf5043acffb067de2543a, type: 3}
   pubTutoImage: {fileID: 21300000, guid: f7bc2b0fd719cde40b3cd689d9ee904f, type: 3}
   fatalErreurSystemImage: {fileID: 21300000, guid: d667cc63206a75443af42547ff347671,
@@ -878,7 +891,7 @@ MonoBehaviour:
     isLooping: 0
   - name: Jump
     clip: {fileID: 8300000, guid: aac2c1385303e704aa7baefa2d1b5e34, type: 3}
-    volume: 1
+    volume: 0.4
     pitch: 1
     source: {fileID: 0}
     isLooping: 0
@@ -890,13 +903,13 @@ MonoBehaviour:
     isLooping: 0
   - name: Music
     clip: {fileID: 8300000, guid: f4c0a085efdc4b348b794748a2bba8d4, type: 3}
-    volume: 0.3
+    volume: 0.1
     pitch: 1
     source: {fileID: 0}
     isLooping: 1
   - name: Error
     clip: {fileID: 8300000, guid: f3adf07a84c7d494ba9e2365ee34bd9f, type: 3}
-    volume: 1
+    volume: 0.5
     pitch: 1
     source: {fileID: 0}
     isLooping: 0
