@@ -164,20 +164,25 @@ public class GameManager_Error : MonoBehaviour
         }
     }
 
-    public void ToggleBlueScreen()
+    public void EnableBlueScreen()
     {
-        blueScreen.SetActive(!blueScreen.activeSelf);
+        blueScreen.SetActive(true);
+    }
+
+    public void DisableBlueScreen()
+    {
+        blueScreen.SetActive(false);
     }
 
     public void QuitApplication()
     {
-        ToggleBlueScreen();
+        EnableBlueScreen();
         Application.Quit();
     }
 
     public void Restart()
     {
-        ToggleBlueScreen();
+        DisableBlueScreen();
         SceneManager.LoadScene("AntoineDino");
     }
 
