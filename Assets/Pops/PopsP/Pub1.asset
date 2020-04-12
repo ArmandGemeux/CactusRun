@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Pub1
   m_EditorClassIdentifier: 
   myType: 1
-  name: Important
+  name: '  '
   description: Voulez vous augmenter la taille de votre cannette
-  annotation: 
+  annotation: '  '
   image: {fileID: 21300000, guid: 1dba7b1d079f94140be56569a9bb82fe, type: 3}
