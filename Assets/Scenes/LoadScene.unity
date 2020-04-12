@@ -1126,6 +1126,7 @@ GameObject:
   - component: {fileID: 1325265476}
   - component: {fileID: 1325265475}
   - component: {fileID: 1325265479}
+  - component: {fileID: 1325265480}
   m_Layer: 5
   m_Name: UIManager_LoadScene
   m_TagString: Untagged
@@ -1226,6 +1227,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d411785c38c11f84ca9350434a19ab3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1325265480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1325265474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5100521f0153342a5a078cd7d18823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Launching
+    clip: {fileID: 8300000, guid: 56c26f52702ff844c82c19999896b7c0, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isLooping: 0
 --- !u!1 &1383586704
 GameObject:
   m_ObjectHideFlags: 0

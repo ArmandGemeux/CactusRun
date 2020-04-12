@@ -8,7 +8,7 @@ public class UIManager_LoadScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManager.Instance.PlaySound("Launching");
     }
 
     // Update is called once per frame

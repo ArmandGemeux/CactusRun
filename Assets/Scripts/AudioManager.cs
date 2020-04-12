@@ -52,7 +52,6 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         StartMusic();
-        PlaySound("Launching");
     }
 
     public void StartMusic()

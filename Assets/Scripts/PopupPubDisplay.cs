@@ -17,6 +17,7 @@ public class PopupPubDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioManager.Instance.PlaySound("Error");
         Debug.Log("salut");
 
         GameManager_Error.Instance.AddValueToLife(true);
