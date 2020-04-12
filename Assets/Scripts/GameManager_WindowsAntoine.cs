@@ -75,7 +75,7 @@ public class GameManager_WindowsAntoine : MonoBehaviour
     {
         taskManager.SetActive(true);
         
-        for (int i = 0; i < popupParent.childCount || taskParent.GetChild(taskParent.childCount - 1).gameObject.activeInHierarchy == true; i ++)
+        for (int i = 0; i < popupParent.childCount; i ++)
         {
             if (popupParent.GetChild(i).gameObject.GetComponent<PopupPubDisplay>() != null)
             {

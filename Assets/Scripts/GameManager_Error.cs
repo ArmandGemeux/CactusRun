@@ -74,7 +74,7 @@ public class GameManager_Error : MonoBehaviour
         if(timeFromStart > timeBeforePopupSpawn && canPopupSpawn)
         {
             timeBeforePopupSpawn /= reduceSpawnIntervaleDivide;
-            timeBeforePopupSpawn += Time.time;
+            timeBeforePopupSpawn += timeFromStart;
             reduceSpawnIntervaleDivide++;
             InstancePopup();
         }

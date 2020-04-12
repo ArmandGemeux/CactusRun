@@ -17,6 +17,8 @@ public class PopupPubDisplay : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log("salut");
+
         GameManager_Error.Instance.AddValueToLife(true);
 
         pop = GameManager_Error.Instance.SendPopupPub();
@@ -56,5 +58,6 @@ public class PopupPubDisplay : MonoBehaviour
     private void OnDestroy()
     {
         GameManager_Error.Instance.AddValueToLife(false);
+        Debug.Log("aurevoir");
     }
 }

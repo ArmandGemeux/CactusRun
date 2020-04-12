@@ -35,7 +35,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log(eventData.position);
+
     }
 
     // Use this for initialization
