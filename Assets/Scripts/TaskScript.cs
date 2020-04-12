@@ -27,5 +27,7 @@ public class TaskScript : MonoBehaviour
     public void DeleteButton()
     {
         Destroy(myPop);
+        GameManager_WindowsAntoine.Instance.OpenTaskManager();
+        gameObject.SetActive(false);
     }
 }

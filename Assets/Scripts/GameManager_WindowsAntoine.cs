@@ -15,6 +15,19 @@ public class GameManager_WindowsAntoine : MonoBehaviour
     public Transform popupParent;
     public Transform taskParent;
 
+    public static GameManager_WindowsAntoine Instance;
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,22 +54,43 @@ public class GameManager_WindowsAntoine : MonoBehaviour
             timeToNextKeyActual = 0;
             isOpenning = true;
 
-            keyNumberActual ++;
-
-            if (keyNumberActual >= taskManagerKeys.Length)
+            if (keyNumberActual < taskManagerKeys.Length - 1)
+            {
+                keyNumberActual++;
+            }
+            else if (keyNumberActual >= taskManagerKeys.Length - 1)
             {
                 OpenTaskManager();
+                keyNumberActual = 0;
             }
         }
     }
 
-    private void OpenTaskManager()
+    public void CloseTaskManager()
+    {
+        taskManager.SetActive(false);
+    }
+
+    public void OpenTaskManager()
     {
         taskManager.SetActive(true);
         
-        for (int i = 0; i < popupParent.childCount || taskParent.GetChild(taskParent.childCount - 1).gameObject.activeInHierarchy == false; i ++)
+        for (int i = 0; i < popupParent.childCount || taskParent.GetChild(taskParent.childCount - 1).gameObject.activeInHierarchy == true; i ++)
         {
-            popupParent.GetChild(i);
+            if (popupParent.GetChild(i).gameObject.GetComponent<PopupPubDisplay>() != null)
+            {
+                bool finished = false;
+
+                for (int k = 0; k < taskParent.childCount; k ++)
+                {
+                    if ((taskParent.GetChild(k).gameObject.activeInHierarchy == false) && (finished == false))
+                    {
+                        taskParent.GetChild(k).gameObject.SetActive(true);
+                        taskParent.GetChild(k).gameObject.GetComponent<TaskScript>().SetMyPop(popupParent.GetChild(i).gameObject);
+                        finished = true;
+                    }
+                }
+            }
         }
     }
 }

@@ -26,6 +26,11 @@ public class PopupPubDisplay : MonoBehaviour
         //imagePop.preserveAspect = true;
 
         transform.position = GameManager_Error.Instance.RandomRange();
+
+        if (GameManager_WindowsAntoine.Instance.taskManager.activeInHierarchy == true)
+        {
+            GameManager_WindowsAntoine.Instance.OpenTaskManager();
+        }
     }
 
     public void QuitSysteme()
