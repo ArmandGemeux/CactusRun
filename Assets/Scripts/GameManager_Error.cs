@@ -193,10 +193,5 @@ public class GameManager_Error : MonoBehaviour
         }
 
         UIManager.Instance.SetLifeValue(life);
-
-        if (life >= 100)
-        {
-            ToggleBlueScreen();
-        }
     }
 }
