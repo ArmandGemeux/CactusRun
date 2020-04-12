@@ -13,6 +13,7 @@ public class GameManager_Error : MonoBehaviour
     public float reduceSpawnIntervaleDivide = 1;
     public bool canPopupSpawn;
 
+    public GameObject popupPubInstance;
     public GameObject popInstance;
     public Transform popupParent;
 
@@ -59,7 +60,7 @@ public class GameManager_Error : MonoBehaviour
         }
     }
 
-    public Pops SendPop()
+    public Pops SendPopup()
     {
         if (Time.time > timeBeforePopUpgrade*2)
         {
@@ -70,10 +71,6 @@ public class GameManager_Error : MonoBehaviour
                 {
                     return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
                 }
-                if (rand == 1)
-                {
-                    return pub[Random.Range(0, pub.Length)];
-                }
                 if (rand == 2)
                 {
                     return fatalErreurSysteme[Random.Range(0, fatalErreurSysteme.Length)];
@@ -81,36 +78,21 @@ public class GameManager_Error : MonoBehaviour
             }
             else
             {
-                int rand = Random.Range(0, 2);
-                if (rand == 0)
-                {
-                    return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
-                }
-                if (rand == 1)
-                {
-                    return pub[Random.Range(0, pub.Length)];
-                }
                 fatalInvoke = false;
-            }
-            
-        }
-        else if(Time.time > timeBeforePopUpgrade)
-        {
-            int rand = Random.Range(0, 2);
-            if (rand == 0)
-            {
                 return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
             }
-            if (rand == 1)
-            {
-                return pub[Random.Range(0, pub.Length)];
-            }
+            
         }
         else
         {
             return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
         }
         return null;
+    }
+
+    public Pops SendPopupPub()
+    {
+        return pub[Random.Range(0, pub.Length)];
     }
 
     public Vector2 RandomRange()
@@ -124,7 +106,22 @@ public class GameManager_Error : MonoBehaviour
 
     public void InstancePopup()
     {
-        Instantiate(popInstance, popupParent); 
+        if(Time.time > timeBeforePopUpgrade)
+        {
+            int rand = Random.Range(0, 3);
+            if(rand > 0)
+            {
+                Instantiate(popInstance, popupParent);
+            }
+            if (rand == 0)
+            {
+                Instantiate(popupPubInstance, popupParent);
+            }
+        }
+        else
+        {
+            Instantiate(popInstance, popupParent);
+        }
     }
 
     public void ToggleBlueScreen()

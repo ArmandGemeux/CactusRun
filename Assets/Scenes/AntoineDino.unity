@@ -365,6 +365,8 @@ MonoBehaviour:
   taskManager: {fileID: 0}
   taskManagerKeys: 
   timeToNextKey: 0
+  popupParent: {fileID: 0}
+  taskParent: {fileID: 0}
 --- !u!114 &404752884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -383,6 +385,8 @@ MonoBehaviour:
   timeBeforePopupSpawn: 2.5
   reduceSpawnIntervaleDivide: 1
   canPopupSpawn: 1
+  popupPubInstance: {fileID: 1861929234445739490, guid: 874f3c0e99cba904bb80c68e5c4d1374,
+    type: 3}
   popInstance: {fileID: 1525304620498653515, guid: 013c3143adf7ac74a9de1116bb7466dc,
     type: 3}
   popupParent: {fileID: 1726895295}

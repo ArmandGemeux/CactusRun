@@ -4,20 +4,20 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-public class PopDisplay : MonoBehaviour
+public class PopupPubDisplay : MonoBehaviour
 {
     private Pops pop;
 
     public TextMeshProUGUI nameText;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI annotation;
-    
+
     public Image imagePop;
 
     // Start is called before the first frame update
     void Start()
     {
-        pop = GameManager_Error.Instance.SendPopup();
+        pop = GameManager_Error.Instance.SendPopupPub();
         nameText.text = pop.name;
         descriptionText.text = pop.description;
         annotation.text = pop.annotation;
@@ -30,16 +30,9 @@ public class PopDisplay : MonoBehaviour
 
     public void QuitSysteme()
     {
-        if(pop.myType == popType.ErreurSysteme)
+        if (pop.myType == popType.Pubs)
         {
-            Destroy(gameObject);
-        }
-        if(pop.myType == popType.FatalErreurSysteme)
-        {
-            GameManager_Error.Instance.fatalInvoke = true;
-            GameManager_Error.Instance.InstancePopup();
-            GameManager_Error.Instance.InstancePopup();
-            Destroy(gameObject);
+            Debug.Log("ne se ferme pas comme ça");
         }
     }
 
