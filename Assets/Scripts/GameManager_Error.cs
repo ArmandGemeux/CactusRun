@@ -31,16 +31,13 @@ public class GameManager_Error : MonoBehaviour
     public Pops[] fatalErreurSysteme;
 
     private bool erreurSystemeTuto = false;
-    public string erreurSystemeTutoTitre;
-    public string erreurSystemeTutoDescription;
+    public Sprite erreurSystemImage;
 
     private bool pubTuto = false;
-    public string pubTutoTitre;
-    public string pubTutoDescription;
+    public Sprite pubTutoImage;
 
     private bool fatalErreurSystemeTuto = false;
-    public string fatalErreurSystemeTutoTitre;
-    public string fatalErreurSystemeTutoDescription;
+    public Sprite fatalErreurSystemImage;
 
     private float life = 0;
 
@@ -103,7 +100,7 @@ public class GameManager_Error : MonoBehaviour
                     if (fatalErreurSystemeTuto == false)
                     {
                         fatalErreurSystemeTuto = true;
-                        UIManager.Instance.StartShowingAntivirus(fatalErreurSystemeTutoTitre, fatalErreurSystemeTutoDescription);
+                        UIManager.Instance.StartShowingAntivirus(fatalErreurSystemImage);
                     }
 
                     return fatalErreurSysteme[Random.Range(0, fatalErreurSysteme.Length)];
@@ -121,7 +118,7 @@ public class GameManager_Error : MonoBehaviour
             if (erreurSystemeTuto == false)
             {
                 erreurSystemeTuto = true;
-                UIManager.Instance.StartShowingAntivirus(erreurSystemeTutoTitre, erreurSystemeTutoDescription);
+                UIManager.Instance.StartShowingAntivirus(erreurSystemImage);
             }
 
             return erreurSysteme[Random.Range(0, erreurSysteme.Length)];
@@ -157,7 +154,7 @@ public class GameManager_Error : MonoBehaviour
                 if (pubTuto == false)
                 {
                     pubTuto = true;
-                    UIManager.Instance.StartShowingAntivirus(pubTutoTitre, pubTutoDescription);
+                    UIManager.Instance.StartShowingAntivirus(pubTutoImage);
                 }
 
                 Instantiate(popupPubInstance, popupParent);

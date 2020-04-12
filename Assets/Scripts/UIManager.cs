@@ -9,8 +9,6 @@ public class UIManager : MonoBehaviour
 
     public GameObject antiVirusObject;
     public Animator antivirusAnimator;
-    public TMP_Text tittleAntivirusText;
-    public TMP_Text descriptionAntivirusText;
 
     public TMP_Text life;
 
@@ -63,12 +61,11 @@ public class UIManager : MonoBehaviour
         showLife(lifeShowing);
     }
 
-    public void StartShowingAntivirus(string newTittleText, string newDescriptionText)
+    public void StartShowingAntivirus(Sprite newSprite)
     {
         antiVirusObject.SetActive(true);
 
-        tittleAntivirusText.text = newTittleText;
-        descriptionAntivirusText.text = newDescriptionText;
+        antiVirusObject.GetComponent<SpriteRenderer>().sprite = newSprite;
         antivirusAnimator.SetBool("isShowing", true);
 
         Invoke("StopShowingAntivirus", timeShowingNotif);
@@ -86,6 +83,6 @@ public class UIManager : MonoBehaviour
 
     public void showLife(float newLife)
     {
-        life.text = newLife.ToString("0") + (" %");
+        life.text = newLife.ToString("0") + (" % CPU");
     }
 }

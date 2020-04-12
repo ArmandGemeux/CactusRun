@@ -638,18 +638,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &224624894 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 332838969307800496, guid: 3477f92d4c6791d4a8b9fd701af9e274,
-    type: 3}
-  m_PrefabInstance: {fileID: 1676248737}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &368394010
 GameObject:
   m_ObjectHideFlags: 0
@@ -756,6 +744,7 @@ GameObject:
   - component: {fileID: 404752884}
   - component: {fileID: 404752883}
   - component: {fileID: 404752887}
+  - component: {fileID: 404752888}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -793,6 +782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blueScreen: {fileID: 1803694364}
+  scoreOnBlueScreen: {fileID: 0}
   fatalInvoke: 0
   timeBeforePopUpgrade: 25
   timeBeforePopupSpawn: 0.3
@@ -809,12 +799,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a7f4c984eeb5ed84a8e5352b5d395bbc, type: 2}
   fatalErreurSysteme:
   - {fileID: 11400000, guid: 3940cd930b44fe54db017ce07f356177, type: 2}
-  erreurSystemeTutoTitre: "Erreur syst\xE8me"
-  erreurSystemeTutoDescription: Joris
-  pubTutoTitre: Pub
-  pubTutoDescription: Armand
-  fatalErreurSystemeTutoTitre: "Faral erreur Syst\xE8me"
-  fatalErreurSystemeTutoDescription: Eva
+  erreurSystemImage: {fileID: 0}
+  pubTutoImage: {fileID: 0}
+  fatalErreurSystemImage: {fileID: 0}
   CPUMessageValue: 10
 --- !u!114 &404752885
 MonoBehaviour:
@@ -865,11 +852,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   antiVirusObject: {fileID: 2092862500}
   antivirusAnimator: {fileID: 378503708}
-  tittleAntivirusText: {fileID: 224624894}
-  descriptionAntivirusText: {fileID: 1495434049}
   life: {fileID: 871385285}
   lifeShowingSpeed: 5
   timeShowingNotif: 10
+--- !u!114 &404752888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404752882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d5100521f0153342a5a078cd7d18823, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: CloseWindow
+    clip: {fileID: 8300000, guid: 652e979368f62aa488e9e5f21add02bd, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isLooping: 0
+  - name: Jump
+    clip: {fileID: 8300000, guid: aac2c1385303e704aa7baefa2d1b5e34, type: 3}
+    volume: 1
+    pitch: 1
+    source: {fileID: 0}
+    isLooping: 0
 --- !u!1 &407540607
 GameObject:
   m_ObjectHideFlags: 0
@@ -3290,18 +3300,6 @@ Transform:
   m_Father: {fileID: 1695594180}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -270, y: 0, z: 179.99998}
---- !u!114 &1495434049 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 332838969428653814, guid: 3477f92d4c6791d4a8b9fd701af9e274,
-    type: 3}
-  m_PrefabInstance: {fileID: 1676248737}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1595397964
 GameObject:
   m_ObjectHideFlags: 0

@@ -22,6 +22,7 @@ public class CactusScript : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Space)) && (gotJump == true))
         {
+            AudioManager.Instance.PlaySound("Jump");
             myAnimator.Play("JumpAnim");
             rb.AddForce(new Vector2(0, jumpForce));
             gotJump = false;

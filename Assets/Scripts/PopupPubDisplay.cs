@@ -57,6 +57,7 @@ public class PopupPubDisplay : MonoBehaviour
 
     private void OnDestroy()
     {
+        AudioManager.Instance.PlaySound("CloseWindow");
         GameManager_Error.Instance.AddValueToLife(false);
         Debug.Log("aurevoir");
     }
