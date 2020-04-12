@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager_Error : MonoBehaviour
 {
+    public GameObject blueScreen;
+
     public bool fatalInvoke;
     public int timeBeforePopUpgrade = 15;
     public float timeBeforePopupSpawn = 2.5f;
@@ -122,5 +125,22 @@ public class GameManager_Error : MonoBehaviour
     public void InstancePopup()
     {
         Instantiate(popInstance, popupParent); 
+    }
+
+    public void ToggleBlueScreen()
+    {
+        blueScreen.SetActive(!blueScreen.activeSelf);
+    }
+
+    public void QuitApplication()
+    {
+        ToggleBlueScreen();
+        Application.Quit();
+    }
+
+    public void Restart()
+    {
+        ToggleBlueScreen();
+        SceneManager.LoadScene("AntoineDino");
     }
 }

@@ -80,5 +80,6 @@ public class Cactus_GameManager : MonoBehaviour
     {
         GameManager_Error.Instance.canPopupSpawn = false;
         isAlive = false;
+        GameManager_Error.Instance.ToggleBlueScreen();
     }
 }
