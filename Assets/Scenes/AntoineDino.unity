@@ -725,12 +725,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 368394010}
   m_CullTransparentMesh: 0
---- !u!95 &378503708 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 332838968200911323, guid: 3477f92d4c6791d4a8b9fd701af9e274,
-    type: 3}
-  m_PrefabInstance: {fileID: 1676248737}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &404752882
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,9 +793,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a7f4c984eeb5ed84a8e5352b5d395bbc, type: 2}
   fatalErreurSysteme:
   - {fileID: 11400000, guid: 3940cd930b44fe54db017ce07f356177, type: 2}
-  erreurSystemImage: {fileID: 0}
-  pubTutoImage: {fileID: 0}
-  fatalErreurSystemImage: {fileID: 0}
+  erreurSystemImage: {fileID: 21300000, guid: ccc305a24af89ee458943e1db86e7d86, type: 3}
+  pubTutoImage: {fileID: 21300000, guid: 9882c81da2318794c968b75c5ab95dce, type: 3}
+  fatalErreurSystemImage: {fileID: 21300000, guid: 2b621f54103930a4e85a374bf1d79e6f,
+    type: 3}
   CPUMessageValue: 10
 --- !u!114 &404752885
 MonoBehaviour:
@@ -850,8 +845,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 542afc14050fc20469e6e12a63fa4aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  antiVirusObject: {fileID: 2092862500}
-  antivirusAnimator: {fileID: 378503708}
+  antiVirusObject: {fileID: 332838968177386444}
+  antivirusAnimator: {fileID: 332838968702558074}
   life: {fileID: 871385285}
   lifeShowingSpeed: 5
   timeShowingNotif: 10
@@ -1692,8 +1687,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: New Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 9d08553bbcf4a8d4eaaed68b627e17d3, type: 2}
+  m_sharedMaterial: {fileID: -2997855667828228226, guid: 9d08553bbcf4a8d4eaaed68b627e17d3,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3294,7 +3290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1416336586}
   m_LocalRotation: {x: 0.000000011422178, y: 0.70710677, z: -0.7071069, w: 0.000000005796479}
-  m_LocalPosition: {x: 0.19, y: 0.62, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.89053285, y: 0.8170014, z: 0.4575207}
   m_Children: []
   m_Father: {fileID: 1695594180}
@@ -3713,10 +3709,15 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 332838968728446315, guid: 3477f92d4c6791d4a8b9fd701af9e274,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 332838968728446317, guid: 3477f92d4c6791d4a8b9fd701af9e274,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 332838969428653814, guid: 3477f92d4c6791d4a8b9fd701af9e274,
         type: 3}
@@ -3782,7 +3783,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.18126321, y: 2.7772055}
+  m_Offset: {x: -0.018079996, y: 2.1534538}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -3793,7 +3794,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 7.059356, y: 0.2878952}
+  m_Size: {x: 8.8984585, y: 0.32647896}
   m_EdgeRadius: 0
 --- !u!4 &1695594180
 Transform:
@@ -4212,9 +4213,15 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1992301930}
   m_CullTransparentMesh: 0
---- !u!1 &2092862500 stripped
+--- !u!1 &332838968177386444 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 332838968728446317, guid: 3477f92d4c6791d4a8b9fd701af9e274,
+    type: 3}
+  m_PrefabInstance: {fileID: 1676248737}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &332838968702558074 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 332838968200911323, guid: 3477f92d4c6791d4a8b9fd701af9e274,
     type: 3}
   m_PrefabInstance: {fileID: 1676248737}
   m_PrefabAsset: {fileID: 0}

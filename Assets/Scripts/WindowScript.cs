@@ -30,6 +30,6 @@ public class WindowScript : MonoBehaviour
         cursorPose.x = Mathf.Clamp(cursorPose.x, minX, maxX);
         cursorPose.y = Mathf.Clamp(cursorPose.y, minY, maxY);
 
-        transform.position = new Vector2(cursorPose.x, cursorPose.y + -2.73f);
+        transform.position = new Vector2(cursorPose.x, cursorPose.y + -2.20f);
     }
 }
