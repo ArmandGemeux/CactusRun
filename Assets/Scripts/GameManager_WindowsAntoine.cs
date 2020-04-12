@@ -16,6 +16,7 @@ public class GameManager_WindowsAntoine : MonoBehaviour
     public Transform taskParent;
 
     public static GameManager_WindowsAntoine Instance;
+
     private void Awake()
     {
         if (Instance != null)
@@ -68,6 +69,7 @@ public class GameManager_WindowsAntoine : MonoBehaviour
 
     public void CloseTaskManager()
     {
+        AudioManager.Instance.PlaySound("CloseWindow");
         taskManager.SetActive(false);
     }
 

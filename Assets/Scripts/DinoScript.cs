@@ -28,6 +28,7 @@ public class DinoScript : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
+            AudioManager.Instance.PlaySound("Die");
             Cactus_GameManager.Instance.Die();
         }
     }

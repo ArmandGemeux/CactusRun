@@ -43,6 +43,8 @@ public class GameManager_Error : MonoBehaviour
 
     public float CPUMessageValue;
 
+    public float timeToCastBlueScreen;
+
     public static GameManager_Error Instance;
     private void Awake()
     {
@@ -168,8 +170,13 @@ public class GameManager_Error : MonoBehaviour
 
     public void EnableBlueScreen()
     {
+        Invoke("ShowBlueScreen", timeToCastBlueScreen);
+    }
+
+    private void ShowBlueScreen()
+    {
         blueScreen.SetActive(true);
-        scoreOnBlueScreen.text = (Cactus_GameManager.Instance.score*5).ToString("0") + " Score Atteint";
+        scoreOnBlueScreen.text = (Cactus_GameManager.Instance.score * 5).ToString("0") + " Score Atteint";
     }
 
     public void DisableBlueScreen()
