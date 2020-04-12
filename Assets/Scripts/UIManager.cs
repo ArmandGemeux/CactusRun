@@ -57,7 +57,7 @@ public class UIManager : MonoBehaviour
 
         if (lifeShowing >= 100)
         {
-            GameManager_Error.Instance.ToggleBlueScreen();
+            GameManager_Error.Instance.EnableBlueScreen();
         }
 
         showLife(lifeShowing);
