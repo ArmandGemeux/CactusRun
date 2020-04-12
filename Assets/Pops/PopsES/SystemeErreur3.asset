@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 580d0843474d8f5498277e5bdc2311b9, type: 3}
-  m_Name: Stockage
+  m_Name: SystemeErreur3
   m_EditorClassIdentifier: 
-  myType: 2
-  name: Stockage
-  description: "Disc D satur\xE9"
+  myType: 0
+  name: 
+  description: "Le groove de l'empereur menace de s'\xE9teindre"
   annotation: 
-  image: {fileID: 21300000, guid: 61ea40ce28fe10745b4cec75f4b73c0d, type: 3}
+  image: {fileID: 21300000, guid: 2039e18fc0be0074da7dc964c193a233, type: 3}
