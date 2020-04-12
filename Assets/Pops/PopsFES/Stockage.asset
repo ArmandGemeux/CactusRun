@@ -15,5 +15,5 @@ MonoBehaviour:
   myType: 2
   name: Stockage
   description: "Disc D satur\xE9"
-  typeErreur: '  '
+  annotation: 
   image: {fileID: 0}

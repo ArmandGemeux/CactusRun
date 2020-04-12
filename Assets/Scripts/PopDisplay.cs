@@ -23,6 +23,7 @@ public class PopDisplay : MonoBehaviour
         annotation.text = pop.annotation;
 
         imagePop.sprite = pop.image;
+        //imagePop.preserveAspect = true;
 
         transform.position = GameManager_Error.Instance.RandomRange();
     }

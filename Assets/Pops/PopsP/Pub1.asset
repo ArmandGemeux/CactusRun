@@ -15,5 +15,5 @@ MonoBehaviour:
   myType: 1
   name: Important
   description: Voulez vous augmenter la taille de votre cannette
-  typeErreur: "seulement 300\u20AC"
+  annotation: 
   image: {fileID: 0}

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580d0843474d8f5498277e5bdc2311b9, type: 3}
   m_Name: SystemeErreur1
   m_EditorClassIdentifier: 
-  name: Services
+  myType: 0
+  name: 
   description: "Impossible d'arr\xEAter le service Th\xE8me sur Ordinateur local"
-  typeErreur: "Erreur 5 : Acc\xE8s refus\xE9"
-  image: {fileID: 0}
+  annotation: 
+  image: {fileID: 21300000, guid: 2039e18fc0be0074da7dc964c193a233, type: 3}
