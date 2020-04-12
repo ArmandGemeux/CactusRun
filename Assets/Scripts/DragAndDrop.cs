@@ -13,7 +13,7 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 
     private void Awake()
     {
-        myCanvas = GameObject.Find("UiManager"); //PopupCanvas
+        myCanvas = GameObject.Find("PopupCanvas"); //PopupCanvas
         canvas = myCanvas.GetComponent<Canvas>();
         rectTransform = GetComponent<RectTransform>();
     }
