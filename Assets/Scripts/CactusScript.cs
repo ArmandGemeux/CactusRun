@@ -7,6 +7,8 @@ public class CactusScript : MonoBehaviour
     public float jumpForce;
     private Rigidbody2D rb;
 
+    public Animator myAnimator;
+
     public bool gotJump = true;
 
     // Start is called before the first frame update
@@ -20,8 +22,16 @@ public class CactusScript : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.Space)) && (gotJump == true))
         {
+            myAnimator.Play("JumpAnim");
             rb.AddForce(new Vector2(0, jumpForce));
             gotJump = false;
+        }
+
+        if(Cactus_GameManager.Instance.isAlive == false)
+        {
+            myAnimator.Play("DeathAnim");
+            rb.isKinematic = true;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
         }
     }
 
@@ -29,6 +39,7 @@ public class CactusScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Floor"))
         {
+            myAnimator.Play("RunAnim");
             gotJump = true;
         }
     }

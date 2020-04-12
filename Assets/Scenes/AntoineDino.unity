@@ -379,6 +379,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fatalInvoke: 0
   timeBeforePopUpgrade: 10
+  timeBeforePopupSpawn: 2.5
+  canPopupSpawn: 0
   popInstance: {fileID: 5010406420719426694, guid: 013c3143adf7ac74a9de1116bb7466dc,
     type: 3}
   popupParent: {fileID: 1726895295}
@@ -403,9 +405,12 @@ MonoBehaviour:
   obstacle: {fileID: 5564928234983058333, guid: fdc3a4651f3ad534ba380ca14db36ae4,
     type: 3}
   spawnPoint: {fileID: 1751819080}
+  myAnimator: {fileID: 1151237104}
   CD: 4
   randomRange: 35
+  score: 0
   scoreText: {fileID: 407540609}
+  isAlive: 1
 --- !u!4 &404752886
 Transform:
   m_ObjectHideFlags: 0
@@ -1108,6 +1113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpForce: 600
+  myAnimator: {fileID: 1151237104}
   gotJump: 0
 --- !u!61 &1159852859
 BoxCollider2D:

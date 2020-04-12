@@ -10,15 +10,19 @@ public class Cactus_GameManager : MonoBehaviour
     public GameObject obstacle;
     public Transform spawnPoint;
 
+    public Animator myAnimator;
+
     public float CD;
     private float CDActual;
     public float randomRange;
 
-    private float score = 0;
+    [HideInInspector]
+    public float score = 0;
 
     public TextMeshProUGUI scoreText;
 
-    private bool isAlive = true;
+    [HideInInspector]
+    public bool isAlive = true;
 
     private void Awake()
     {
@@ -74,6 +78,7 @@ public class Cactus_GameManager : MonoBehaviour
 
     public void Die()
     {
+        GameManager_Error.Instance.canPopupSpawn = false;
         isAlive = false;
     }
 }
