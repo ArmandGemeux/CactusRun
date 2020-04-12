@@ -795,8 +795,8 @@ MonoBehaviour:
   blueScreen: {fileID: 1803694364}
   fatalInvoke: 0
   timeBeforePopUpgrade: 25
-  timeBeforePopupSpawn: 1
-  reduceSpawnIntervaleDivide: 1
+  timeBeforePopupSpawn: 0.3
+  reduceSpawnIntervaleDivide: 1.2
   canPopupSpawn: 1
   popupPubInstance: {fileID: 1473791699684415348, guid: 874f3c0e99cba904bb80c68e5c4d1374,
     type: 3}
