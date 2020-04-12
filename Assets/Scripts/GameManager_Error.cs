@@ -50,7 +50,7 @@ public class GameManager_Error : MonoBehaviour
         if(Time.time > timeBeforePopupSpawn && canPopupSpawn)
         {
             timeBeforePopupSpawn += Time.time;
-            //timeBeforePopupSpawn /= Cactus_GameManager.Instance.score/reduceSpawnIntervaleDivide;
+            timeBeforePopupSpawn /= Cactus_GameManager.Instance.score/reduceSpawnIntervaleDivide;
             InstancePopup();
         }
     }
