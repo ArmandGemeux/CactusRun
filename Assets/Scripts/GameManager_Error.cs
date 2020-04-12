@@ -7,6 +7,7 @@ public class GameManager_Error : MonoBehaviour
     public bool fatalInvoke;
     public int timeBeforePopUpgrade = 15;
     public float timeBeforePopupSpawn = 2.5f;
+    public float reduceSpawnIntervaleDivide = 100;
     public bool canPopupSpawn;
 
     public GameObject popInstance;
@@ -38,6 +39,9 @@ public class GameManager_Error : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canPopupSpawn == false)
+        { return; }
+
         if(Input.GetKeyDown(KeyCode.A))
         {
             InstancePopup();
@@ -46,6 +50,7 @@ public class GameManager_Error : MonoBehaviour
         if(Time.time > timeBeforePopupSpawn && canPopupSpawn)
         {
             timeBeforePopupSpawn += Time.time;
+            //timeBeforePopupSpawn /= Cactus_GameManager.Instance.score/reduceSpawnIntervaleDivide;
             InstancePopup();
         }
     }
