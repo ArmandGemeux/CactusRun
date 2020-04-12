@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager_Error : MonoBehaviour
 {
     public GameObject blueScreen;
+    public TextMeshProUGUI scoreOnBlueScreen;
 
     private float timeFromStart = 0;
 
@@ -170,6 +172,7 @@ public class GameManager_Error : MonoBehaviour
     public void EnableBlueScreen()
     {
         blueScreen.SetActive(true);
+        scoreOnBlueScreen.text = (Cactus_GameManager.Instance.score*5).ToString("0") + " Score Atteint";
     }
 
     public void DisableBlueScreen()
@@ -179,7 +182,6 @@ public class GameManager_Error : MonoBehaviour
 
     public void QuitApplication()
     {
-        EnableBlueScreen();
         Application.Quit();
     }
 
