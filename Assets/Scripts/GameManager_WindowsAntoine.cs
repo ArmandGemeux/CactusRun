@@ -12,6 +12,9 @@ public class GameManager_WindowsAntoine : MonoBehaviour
     private float timeToNextKeyActual;
     private bool isOpenning = false;
 
+    public Transform popupParent;
+    public Transform taskParent;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,8 +45,18 @@ public class GameManager_WindowsAntoine : MonoBehaviour
 
             if (keyNumberActual >= taskManagerKeys.Length)
             {
-                taskManager.SetActive(true);
+                OpenTaskManager();
             }
+        }
+    }
+
+    private void OpenTaskManager()
+    {
+        taskManager.SetActive(true);
+        
+        for (int i = 0; i < popupParent.childCount || taskParent.GetChild(taskParent.childCount - 1).gameObject.activeInHierarchy == false; i ++)
+        {
+            popupParent.GetChild(i);
         }
     }
 }

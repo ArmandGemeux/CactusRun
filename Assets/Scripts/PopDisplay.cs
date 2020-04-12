@@ -50,4 +50,9 @@ public class PopDisplay : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
+    public popType GetMyType()
+    {
+        return pop.myType;
+    }
 }
