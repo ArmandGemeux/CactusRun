@@ -10,8 +10,11 @@ public class GameManager_Error : MonoBehaviour
     private float timeFromStart = 0;
 
     public bool fatalInvoke;
+    [Range(10,30)]
     public int timeBeforePopUpgrade = 15;
+    [Range(0,1)]
     public float timeBeforePopupSpawn;
+    [Range(1,10)]
     public float reduceSpawnIntervaleDivide = 1;
     public bool canPopupSpawn;
 
