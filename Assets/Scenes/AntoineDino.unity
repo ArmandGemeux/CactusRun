@@ -380,7 +380,7 @@ MonoBehaviour:
   fatalInvoke: 0
   timeBeforePopUpgrade: 10
   timeBeforePopupSpawn: 2.5
-  reduceSpawnIntervaleDivide: 100
+  reduceSpawnIntervaleDivide: 1
   canPopupSpawn: 0
   popInstance: {fileID: 5010406420719426694, guid: 013c3143adf7ac74a9de1116bb7466dc,
     type: 3}
